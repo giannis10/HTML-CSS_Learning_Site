@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Ομαδοποίηση Στοιχείων Φόρμας (Fieldset & Legend)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/subscribe.php">      
+			<fieldset>
+				<legend>Στοιχεία επικοινωνίας</legend>
+				<label>Email:<br /><input type="text" name="email" /></label><br />
+				<label>Κινητό:<br /><input type="text" name="mobile" /></label><br />
+				<label>Σταθερό τηλέφωνο:<br /><input type="text" name="telephone" /></label>
+			</fieldset>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ομαδοποίηση Πεδίων Φόρμας (<fieldset> και <legend>)</h3>
+				<p class="code-explainer-desc">Χρησιμοποιήστε <code>&lt;fieldset&gt;</code> για να ομαδοποιήσετε οπτικά συναφή πεδία με ένα πλαίσιο, και <code>&lt;legend&gt;</code> για να ορίσετε τον τίτλο της ομάδας.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Ομαδοποίηση Στοιχείων Φόρμας (Fieldset &amp; Legend)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/subscribe.php&quot;&gt;      
+			&lt;fieldset&gt;
+				&lt;legend&gt;Στοιχεία επικοινωνίας&lt;/legend&gt;
+				&lt;label&gt;Email:&lt;br /&gt;&lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;&lt;/label&gt;&lt;br /&gt;
+				&lt;label&gt;Κινητό:&lt;br /&gt;&lt;input type=&quot;text&quot; name=&quot;mobile&quot; /&gt;&lt;/label&gt;&lt;br /&gt;
+				&lt;label&gt;Σταθερό τηλέφωνο:&lt;br /&gt;&lt;input type=&quot;text&quot; name=&quot;telephone&quot; /&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

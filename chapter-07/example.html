@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Φόρμες</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/review.php" method="get">
+			<fieldset>
+				<legend>Τα Στοιχεία σας:</legend>
+				<label>Όνομα: <input type="text" name="name" size="30" maxlength="100"></label><br />
+				<label>Email: <input type="email" name="email" size="30" maxlength="100"></label><br />
+			</fieldset><br />
+			<fieldset>
+				<legend>Η Κριτική σας:</legend>
+				<p>
+					<label for="hear-about">Πώς μάθατε για εμάς;</label>
+					<select name="referrer" id="hear-about">
+						<option value="google">Google</option>
+						<option value="friend">Από φίλο</option>
+						<option value="advert">Από διαφήμιση</option>
+						<option value="other">Άλλο</option>
+					</select>
+				</p>
+				<p>
+					Θα μας επισκεπτόσασταν ξανά;<br />
+					<label><input type="radio" name="rating" value="yes" /> Ναι</label>
+					<label><input type="radio" name="rating" value="no" /> Όχι</label>
+					<label><input type="radio" name="rating" value="maybe" /> Ίσως</label>
+				</p>
+				<p>
+					<label for="comments">Σχόλια:</label><br />
+					<textarea rows="4" cols="40" id="comments"></textarea>
+				</p>
+				<label><input type="checkbox" name="subscribe" checked="checked" /> Εγγραφείτε για ενημερώσεις μέσω email</label><br />
+				<input type="submit" value="Υποβολή κριτικής" />
+			</fieldset>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ολοκληρωμένη Φόρμα Αξιολόγησης και Εγγραφής</h3>
+				<p class="code-explainer-desc">Σύνθετο παράδειγμα φόρμας που συνδυάζει fieldsets, labels, text/email inputs, radio buttons, select dropdowns, textarea, checkbox και κουμπί υποβολής.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Φόρμες&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/review.php&quot; method=&quot;get&quot;&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;Τα Στοιχεία σας:&lt;/legend&gt;
+				&lt;label&gt;Όνομα: &lt;input type=&quot;text&quot; name=&quot;name&quot; size=&quot;30&quot; maxlength=&quot;100&quot;&gt;&lt;/label&gt;&lt;br /&gt;
+				&lt;label&gt;Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; size=&quot;30&quot; maxlength=&quot;100&quot;&gt;&lt;/label&gt;&lt;br /&gt;
+			&lt;/fieldset&gt;&lt;br /&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;Η Κριτική σας:&lt;/legend&gt;
+				&lt;p&gt;
+					&lt;label for=&quot;hear-about&quot;&gt;Πώς μάθατε για εμάς;&lt;/label&gt;
+					&lt;select name=&quot;referrer&quot; id=&quot;hear-about&quot;&gt;
+						&lt;option value=&quot;google&quot;&gt;Google&lt;/option&gt;
+						&lt;option value=&quot;friend&quot;&gt;Από φίλο&lt;/option&gt;
+						&lt;option value=&quot;advert&quot;&gt;Από διαφήμιση&lt;/option&gt;
+						&lt;option value=&quot;other&quot;&gt;Άλλο&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/p&gt;
+				&lt;p&gt;
+					Θα μας επισκεπτόσασταν ξανά;&lt;br /&gt;
+					&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot; value=&quot;yes&quot; /&gt; Ναι&lt;/label&gt;
+					&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot; value=&quot;no&quot; /&gt; Όχι&lt;/label&gt;
+					&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;rating&quot; value=&quot;maybe&quot; /&gt; Ίσως&lt;/label&gt;
+				&lt;/p&gt;
+				&lt;p&gt;
+					&lt;label for=&quot;comments&quot;&gt;Σχόλια:&lt;/label&gt;&lt;br /&gt;
+					&lt;textarea rows=&quot;4&quot; cols=&quot;40&quot; id=&quot;comments&quot;&gt;&lt;/textarea&gt;
+				&lt;/p&gt;
+				&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked=&quot;checked&quot; /&gt; Εγγραφείτε για ενημερώσεις μέσω email&lt;/label&gt;&lt;br /&gt;
+				&lt;input type=&quot;submit&quot; value=&quot;Υποβολή κριτικής&quot; /&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

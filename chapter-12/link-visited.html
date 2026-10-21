@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Καταστάσεις Συνδέσμων (:link, :visited)</title>
+		<style type="text/css">
+			a:link {
+				color: deeppink;
+				text-decoration: none;}
+			a:visited {
+				color: black;}
+			a:hover {
+				color: deeppink;
+				text-decoration: underline;}
+			a:active {
+				color: darkcyan;}
+		</style>
+	</head>
+	<body>
+		<h1>Ράτσες Σκύλων: <span style="color: deeppink;">B</span></h1>
+		<ul>
+			<li><a href="http://en.wikipedia.org/wiki/Basset_Hound">Basset Hound</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Beagle">Beagle</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bearded_Collie">Bearded Collie</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Beauceron">Beauceron</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bedlington_Terrier">Bedlington Terrier</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Belgian_Shepherd_Dog_(Groenendael)">Belgian Shepherd</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bergamasco_Shepherd">Bergamasco</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bichon_Frisé">Bichon Frise</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bloodhound">Bloodhound</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bolognese_(dog)">Bolognese</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Border_Collie">Border Collie</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Border_Terrier">Border Terrier</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Borzoi">Borzoi</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bouvier_des_Flandres">Bouvier des Flandres</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Briard">Briard</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bull_Terrier">Bull Terrier</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Bulldog">Bulldog</a></li>
+		</ul>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ψευδοκλάσεις Συνδέσμων (:link και :visited)</h3>
+				<p class="code-explainer-desc">Διαφοροποιήστε τους μη επισκεφθέντες συνδέσμους με το <code>a:link</code> και τους ήδη επισκεφθέντες συνδέσμους με το <code>a:visited</code>.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Καταστάσεις Συνδέσμων (:link, :visited)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			a:link {
+				color: deeppink;
+				text-decoration: none;}
+			a:visited {
+				color: black;}
+			a:hover {
+				color: deeppink;
+				text-decoration: underline;}
+			a:active {
+				color: darkcyan;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Ράτσες Σκύλων: &lt;span style=&quot;color: deeppink;&quot;&gt;B&lt;/span&gt;&lt;/h1&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Basset_Hound&quot;&gt;Basset Hound&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Beagle&quot;&gt;Beagle&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bearded_Collie&quot;&gt;Bearded Collie&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Beauceron&quot;&gt;Beauceron&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bedlington_Terrier&quot;&gt;Bedlington Terrier&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Belgian_Shepherd_Dog_(Groenendael)&quot;&gt;Belgian Shepherd&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bergamasco_Shepherd&quot;&gt;Bergamasco&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bichon_Frisé&quot;&gt;Bichon Frise&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bloodhound&quot;&gt;Bloodhound&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bolognese_(dog)&quot;&gt;Bolognese&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Border_Collie&quot;&gt;Border Collie&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Border_Terrier&quot;&gt;Border Terrier&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Borzoi&quot;&gt;Borzoi&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bouvier_des_Flandres&quot;&gt;Bouvier des Flandres&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Briard&quot;&gt;Briard&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bull_Terrier&quot;&gt;Bull Terrier&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bulldog&quot;&gt;Bulldog&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

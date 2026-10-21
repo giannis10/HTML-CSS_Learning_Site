@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Αυτός είναι ο Τίτλος της Σελίδας</title>
+		<style>
+			.html-structure-diagram {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				max-width: 640px;
+				margin: 20px auto 28px;
+				border-radius: 16px;
+				overflow: hidden;
+				border: 2px solid rgba(56, 189, 248, 0.3);
+			}
+			.diagram-row {
+				display: flex;
+				align-items: stretch;
+			}
+			.diagram-label {
+				background: rgba(56, 189, 248, 0.15);
+				color: #38bdf8;
+				font-family: 'Courier New', monospace;
+				font-size: 13px;
+				font-weight: 700;
+				padding: 14px 16px;
+				min-width: 170px;
+				display: flex;
+				align-items: center;
+				border-right: 2px solid rgba(56, 189, 248, 0.2);
+				letter-spacing: 0.5px;
+			}
+			.diagram-content {
+				background: rgba(255,255,255,0.03);
+				flex: 1;
+				padding: 14px 18px;
+				font-size: 13px;
+				color: #94a3b8;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.diagram-content strong {
+				color: #f8fafc;
+			}
+			.diagram-row + .diagram-row {
+				border-top: 1px solid rgba(255,255,255,0.06);
+			}
+			.diagram-root .diagram-label {
+				background: rgba(167, 139, 250, 0.2);
+				color: #a78bfa;
+				border-color: rgba(167, 139, 250, 0.2);
+			}
+			.diagram-title .diagram-label {
+				background: rgba(245, 158, 11, 0.15);
+				color: #f59e0b;
+				border-color: rgba(245, 158, 11, 0.2);
+				padding-left: 36px;
+			}
+			.diagram-body-row .diagram-label {
+				background: rgba(34, 197, 94, 0.15);
+				color: #4ade80;
+				border-color: rgba(34, 197, 94, 0.2);
+			}
+			.diagram-h1-row .diagram-label,
+			.diagram-p-row .diagram-label {
+				background: rgba(56, 189, 248, 0.08);
+				color: #38bdf8;
+				border-color: rgba(56, 189, 248, 0.15);
+				padding-left: 52px;
+				font-size: 12px;
+			}
+			.diagram-head-row .diagram-label {
+				background: rgba(56, 189, 248, 0.15);
+				color: #38bdf8;
+				border-color: rgba(56, 189, 248, 0.2);
+				padding-left: 36px;
+			}
+			.tag-badge {
+				display: inline-block;
+				background: rgba(56,189,248,0.12);
+				color: #38bdf8;
+				font-family: monospace;
+				font-size: 11px;
+				border-radius: 4px;
+				padding: 1px 6px;
+				font-weight: 700;
+			}
+			.arrow-indicator {
+				font-size: 20px;
+				animation: pulse 2s infinite;
+			}
+			@keyframes pulse {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.4; }
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Αυτό είναι το Σώμα (Body) της Σελίδας</h1>
+		<p>Οτιδήποτε βρίσκεται μέσα στο σώμα μιας ιστοσελίδας εμφανίζεται στο κύριο παράθυρο του προγράμματος περιήγησης.</p>
+
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Βασική Δομή Σελίδας HTML (&lt;head&gt;, &lt;title&gt;, &lt;body&gt;)</h3>
+				<p class="code-explainer-desc">Για να δημιουργήσετε μια ιστοσελίδα, ξεκινάτε με το στοιχείο <code>&lt;html&gt;</code>. Μέσα περιλαμβάνονται δύο κύρια τμήματα: το <code>&lt;head&gt;</code> (όπου ορίζεται ο τίτλος <code>&lt;title&gt;</code> της καρτέλας) και το <code>&lt;body&gt;</code> (όπου τοποθετείται όλο το ορατό περιεχόμενο της ιστοσελίδας).</p>
+			</div>
+
+			<!-- Visual Diagram of HTML Structure -->
+			<div class="html-structure-diagram">
+				<div class="diagram-row diagram-root">
+					<div class="diagram-label">&lt;html&gt;</div>
+					<div class="diagram-content"><span class="arrow-indicator">📄</span> <strong>Ρίζα εγγράφου</strong> — περιέχει ΟΛΑ τα στοιχεία</div>
+				</div>
+				<div class="diagram-row diagram-head-row">
+					<div class="diagram-label">&lt;head&gt;</div>
+					<div class="diagram-content">🔧 <strong>Αόρατο</strong> — ρυθμίσεις, metadata, CSS links</div>
+				</div>
+				<div class="diagram-row diagram-title">
+					<div class="diagram-label">&lt;title&gt;</div>
+					<div class="diagram-content"><strong>Τίτλος καρτέλας</strong> browser — <em>εμφανίζεται στην tab, όχι στη σελίδα</em></div>
+				</div>
+				<div class="diagram-row diagram-body-row">
+					<div class="diagram-label">&lt;body&gt;</div>
+					<div class="diagram-content">👁️ <strong>Ορατό</strong> — ό,τι γράψετε εδώ εμφανίζεται στη σελίδα</div>
+				</div>
+				<div class="diagram-row diagram-h1-row">
+					<div class="diagram-label">&lt;h1&gt;</div>
+					<div class="diagram-content">Κύριος τίτλος — <span class="tag-badge">μόνο ένας ανά σελίδα</span></div>
+				</div>
+				<div class="diagram-row diagram-p-row">
+					<div class="diagram-label">&lt;p&gt;</div>
+					<div class="diagram-content">Παράγραφος κειμένου — μπορεί να υπάρχουν πολλές</div>
+				</div>
+			</div>
+
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Αυτός είναι ο Τίτλος της Σελίδας&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Αυτό είναι το Σώμα (Body) της Σελίδας&lt;/h1&gt;
+		&lt;p&gt;Οτιδήποτε βρίσκεται μέσα στο σώμα μιας ιστοσελίδας εμφανίζεται στο κύριο παράθυρο του προγράμματος περιήγησης.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Πεδίο Εισαγωγής Αρχείου (File Input)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/upload.php" method="post">
+			<p>Μεταφορτώστε το τραγούδι σας σε μορφή MP3:</p>
+			<input type="file" name="user-song" /><br />
+			<input type="submit" value="Μεταφόρτωση" />
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Πεδίο Μεταφόρτωσης Αρχείου (<input type="file">)</h3>
+				<p class="code-explainer-desc">Επιτρέπει στον χρήστη να επιλέξει αρχείο από τον υπολογιστή του για μεταφόρτωση. Για αποστολή αρχείων, η φόρμα πρέπει να έχει <code>method="post"</code>.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Πεδίο Εισαγωγής Αρχείου (File Input)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/upload.php&quot; method=&quot;post&quot;&gt;
+			&lt;p&gt;Μεταφορτώστε το τραγούδι σας σε μορφή MP3:&lt;/p&gt;
+			&lt;input type=&quot;file&quot; name=&quot;user-song&quot; /&gt;&lt;br /&gt;
+			&lt;input type=&quot;submit&quot; value=&quot;Μεταφόρτωση&quot; /&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

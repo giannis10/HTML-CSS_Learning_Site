@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Υπερχείλιση Περιεχομένου (Overflow)</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;
+				font-size: 90%;
+				line-height: 1.2em;
+				width: 200px;}
+			h2 {
+				color: #0088dd;
+				border-bottom: 1px solid #0088dd;}
+			p {
+				min-height: 30px;
+				max-height: 85px;}
+			p.one {
+				overflow: hidden;}
+			p.two {
+				overflow: scroll;}
+		</style>
+	</head>
+	<body>
+		<h2>Fender Stratocaster</h2>
+		<p class="one">Η Fender Stratocaster ή «Strat» είναι μία από τις πιο δημοφιλείς ηλεκτρικές κιθάρες όλων των εποχών, και το σχέδιό της έχει αντιγραφεί από πολλούς κατασκευαστές. Σχεδιάστηκε από τους Leo Fender, George Fullerton και Freddie Tavares το 1954.</p>
+		<h2>Gibson Les Paul</h2>
+		<p class="two">Η Gibson Les Paul είναι μια ηλεκτρική κιθάρα συμπαγούς σώματος που πωλήθηκε για πρώτη φορά το 1952. Σχεδιάστηκε από τον Ted McCarty σε συνεργασία με τον δημοφιλή κιθαρίστα Les Paul. Είναι ένας από τους πιο γνωστούς τύπους ηλεκτρικής κιθάρας στον κόσμο.</p>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Διαχείριση Υπερχείλισης Περιεχομένου (overflow)</h3>
+				<p class="code-explainer-desc">Όταν το περιεχόμενο υπερβαίνει τις διαστάσεις του κουτιού, χρησιμοποιήστε <code>overflow: hidden;</code> (αποκοπή), <code>scroll;</code> (μόνιμες μπάρες κύλισης) ή <code>auto;</code> (κύλιση μόνο όταν απαιτείται).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Υπερχείλιση Περιεχομένου (Overflow)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;
+				font-size: 90%;
+				line-height: 1.2em;
+				width: 200px;}
+			h2 {
+				color: #0088dd;
+				border-bottom: 1px solid #0088dd;}
+			p {
+				min-height: 30px;
+				max-height: 85px;}
+			p.one {
+				overflow: hidden;}
+			p.two {
+				overflow: scroll;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h2&gt;Fender Stratocaster&lt;/h2&gt;
+		&lt;p class=&quot;one&quot;&gt;Η Fender Stratocaster ή «Strat» είναι μία από τις πιο δημοφιλείς ηλεκτρικές κιθάρες όλων των εποχών, και το σχέδιό της έχει αντιγραφεί από πολλούς κατασκευαστές. Σχεδιάστηκε από τους Leo Fender, George Fullerton και Freddie Tavares το 1954.&lt;/p&gt;
+		&lt;h2&gt;Gibson Les Paul&lt;/h2&gt;
+		&lt;p class=&quot;two&quot;&gt;Η Gibson Les Paul είναι μια ηλεκτρική κιθάρα συμπαγούς σώματος που πωλήθηκε για πρώτη φορά το 1952. Σχεδιάστηκε από τον Ted McCarty σε συνεργασία με τον δημοφιλή κιθαρίστα Les Paul. Είναι ένας από τους πιο γνωστούς τύπους ηλεκτρικής κιθάρας στον κόσμο.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

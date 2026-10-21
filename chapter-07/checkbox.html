@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Πλαίσιο Ελέγχου (Checkbox)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/profile.php">
+			<p>Επιλέξτε την αγαπημένη σας μουσική υπηρεσία (ή υπηρεσίες):
+				<br />
+				<input type="checkbox" name="service" value="itunes" checked="checked" /> iTunes
+				<input type="checkbox" name="service" value="lastfm" /> Last.fm
+				<input type="checkbox" name="service" value="spotify" /> Spotify
+			</p>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Πλαίσια Ελέγχου Πολλαπλής Επιλογής (<input type="checkbox">)</h3>
+				<p class="code-explainer-desc">Τα checkboxes επιτρέπουν στον χρήστη να επιλέξει μία, περισσότερες ή καμία επιλογή. Χρησιμοποιήστε <code>checked="checked"</code> για να είναι προεπιλεγμένο.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Πλαίσιο Ελέγχου (Checkbox)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/profile.php&quot;&gt;
+			&lt;p&gt;Επιλέξτε την αγαπημένη σας μουσική υπηρεσία (ή υπηρεσίες):
+				&lt;br /&gt;
+				&lt;input type=&quot;checkbox&quot; name=&quot;service&quot; value=&quot;itunes&quot; checked=&quot;checked&quot; /&gt; iTunes
+				&lt;input type=&quot;checkbox&quot; name=&quot;service&quot; value=&quot;lastfm&quot; /&gt; Last.fm
+				&lt;input type=&quot;checkbox&quot; name=&quot;service&quot; value=&quot;spotify&quot; /&gt; Spotify
+			&lt;/p&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

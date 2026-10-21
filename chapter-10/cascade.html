@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Πώς Λειτουργεί η Διαδοχή (Cascade) στο CSS</title>
+		<style type="text/css">
+			* {
+				font-family: Arial, Verdana, sans-serif;}
+			h1 {
+				font-family: "Courier New", Courier, monospace;}
+			i {
+				color: green;}
+			i {
+				color: red;}
+			b {
+				color: pink;}
+			p b {
+				color: blue !important;}
+			p b {
+				color: violet;}
+			p#intro {
+				font-size: 100%;}
+			p {
+				font-size: 75%;}
+		</style>
+	</head>
+	<body>
+		<h1>Πατάτες</h1>
+		<p id="intro">Υπάρχουν <i>δεκάδες</i> διαφορετικές ποικιλίες <b>πατάτας</b>.</p>
+		<p>Συνήθως περιγράφονται ως πρώιμες, μεσοπρώιμες και όψιμες πατάτες κύριας σοδειάς.</p>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Πώς Λειτουργεί η Διαδοχή (Cascade) στο CSS</h3>
+				<p class="code-explainer-desc">Όταν πολλοί κανόνες εφαρμόζονται στο ίδιο στοιχείο, η προτεραιότητα καθορίζεται από τη σειρά δήλωσης, την ειδικότητα του επιλογέα και τη δήλωση <code>!important</code>.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Πώς Λειτουργεί η Διαδοχή (Cascade) στο CSS&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			* {
+				font-family: Arial, Verdana, sans-serif;}
+			h1 {
+				font-family: &quot;Courier New&quot;, Courier, monospace;}
+			i {
+				color: green;}
+			i {
+				color: red;}
+			b {
+				color: pink;}
+			p b {
+				color: blue !important;}
+			p b {
+				color: violet;}
+			p#intro {
+				font-size: 100%;}
+			p {
+				font-size: 75%;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Πατάτες&lt;/h1&gt;
+		&lt;p id=&quot;intro&quot;&gt;Υπάρχουν &lt;i&gt;δεκάδες&lt;/i&gt; διαφορετικές ποικιλίες &lt;b&gt;πατάτας&lt;/b&gt;.&lt;/p&gt;
+		&lt;p&gt;Συνήθως περιγράφονται ως πρώιμες, μεσοπρώιμες και όψιμες πατάτες κύριας σοδειάς.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

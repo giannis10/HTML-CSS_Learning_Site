@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κεφάλαιο 17: Σύγχρονη Διάταξη HTML5 • G.T DEV</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../code-helper.css">
+
+    <style>
+        :root {
+            --bg-page: #070b14;
+            --bg-surface: #0f172a;
+            --bg-card: #131d33;
+            --bg-card-hover: #17233f;
+            --bg-elevated: #1e293b;
+            --border-color: rgba(56, 189, 248, 0.22);
+            --border-hover: rgba(56, 189, 248, 0.5);
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --accent-purple: #c084fc;
+            --accent-green: #34d399;
+            --accent-pink: #f472b6;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            --shadow-card: 0 16px 36px -12px rgba(0, 0, 0, 0.65);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(129, 140, 248, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(192, 132, 252, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Outer Layout Wrapper */
+        .layout-container {
+            max-width: 1160px;
+            margin: 28px auto 48px auto;
+            padding: 0 20px;
+        }
+
+        /* ================= Modern Semantic Header ================= */
+        .site-header {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header-hero {
+            padding: 44px 36px 32px 36px;
+            background-image: 
+                linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(7, 11, 20, 0.94)),
+                url("images/header.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .brand-box {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .header-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            width: fit-content;
+        }
+
+        .site-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(26px, 3.8vw, 40px);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .site-title span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .site-slogan {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 500px;
+        }
+
+        .header-badge-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .badge-icon {
+            font-size: 28px;
+        }
+
+        .badge-text-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .badge-text-sub {
+            font-size: 11.5px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Modern Semantic Nav */
+        .site-nav {
+            padding: 12px 28px;
+            background: rgba(10, 15, 26, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .nav-item a:hover, .nav-item a.active {
+            color: #ffffff;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .nav-cta-btn {
+            background: var(--gradient-accent);
+            color: #ffffff !important;
+            font-size: 12.5px !important;
+            font-weight: 700 !important;
+            padding: 8px 18px !important;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .nav-cta-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ================= 2-Column Main Semantic Grid ================= */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 28px;
+        }
+
+        @media (max-width: 900px) {
+            .main-content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Main Section: Courses */
+        .courses-section {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .section-headline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .section-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-count-chip {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--secondary);
+            background: rgba(129, 140, 248, 0.12);
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(129, 140, 248, 0.25);
+        }
+
+        /* Course Article Cards */
+        .course-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            transition: all 0.25s ease;
+        }
+
+        .course-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+
+        @media (max-width: 650px) {
+            .course-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .course-card figure {
+            flex-shrink: 0;
+            width: 220px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .course-card figure img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover figure img {
+            transform: scale(1.03);
+        }
+
+        .course-card figcaption {
+            font-size: 11.5px;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-top: 8px;
+            display: block;
+        }
+
+        .course-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .course-badges-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .badge-pill.duration {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--primary);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .badge-pill.level {
+            background: rgba(52, 211, 153, 0.12);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.25);
+        }
+
+        .course-card hgroup {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .course-card h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .course-card h3 {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .course-card p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .course-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 4px;
+        }
+
+        .course-price {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .course-price small {
+            font-size: 11.5px;
+            color: var(--text-tertiary);
+            font-weight: normal;
+        }
+
+        .course-btn {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .course-btn:hover {
+            background: var(--primary);
+            color: #070b14;
+        }
+
+        /* ================= Aside Sidebar ================= */
+        .site-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .widget-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
+        }
+
+        .popular-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .popular-list li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+
+        .popular-list li a:hover {
+            color: var(--primary);
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.25);
+            transform: translateX(3px);
+        }
+
+        .popular-list li a span.arrow {
+            font-size: 11px;
+            color: var(--text-tertiary);
+        }
+
+        .address-box {
+            font-style: normal;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .address-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .address-item span.icon {
+            color: var(--primary);
+            font-size: 15px;
+        }
+
+        /* Semantic HTML5 Info Widget */
+        .semantic-info-box {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(129, 140, 248, 0.05));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .semantic-info-box strong {
+            color: var(--primary);
+        }
+
+        /* ================= Semantic Footer ================= */
+        .site-footer {
+            margin-top: 36px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .footer-left {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer-left strong {
+            color: var(--primary);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .footer-nav a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 12.5px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky G.T DEV Topbar injected automatically via code-helper.js -->
+
+    <div class="layout-container">
+        <!-- Semantic HTML5 Header -->
+        <header class="site-header">
+            <div class="header-hero">
+                <div class="brand-box">
+                    <span class="header-tag">
+                        <span>🚀</span> HTML5 Semantic Layout
+                    </span>
+                    <h1 class="site-title">
+                        G.T DEV <span>HTML Academy</span>
+                    </h1>
+                    <p class="site-slogan">
+                        Εκπαιδευτικό παράδειγμα διάταξης ιστοσελίδας με σύγχρονα σημασιολογικά στοιχεία HTML5 και responsive CSS Grid από τον G.T DEV.
+                    </p>
+                </div>
+                <div class="header-badge-card">
+                    <span class="badge-icon">🎓</span>
+                    <div>
+                        <div class="badge-text-title">G.T DEV Pro Suite</div>
+                        <div class="badge-text-sub">Κεφάλαιο 17 • Masterclass</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semantic HTML5 Navigation -->
+            <nav class="site-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="active">Αρχική</a></li>
+                    <li class="nav-item"><a href="#courses">Μαθήματα</a></li>
+                    <li class="nav-item"><a href="#recipes">Συνταγές</a></li>
+                    <li class="nav-item"><a href="#contact">Επικοινωνία</a></li>
+                </ul>
+                <a href="#codebox" class="nav-cta-btn" onclick="scrollToCodeExplainer()">
+                    <span>💻</span> Προβολή Κώδικα
+                </a>
+            </nav>
+        </header>
+
+        <!-- Semantic HTML5 Main Container (Grid) -->
+        <main class="main-content-grid">
+            <!-- Left Main Column: Section with Articles -->
+            <section class="courses-section" id="courses">
+                <div class="section-headline">
+                    <h2 class="section-heading">
+                        <span>🍜</span> Προγράμματα &amp; Σεμινάρια
+                    </h2>
+                    <span class="section-count-chip">2 Νέα Μαθήματα</span>
+                </div>
+
+                <!-- Course Article 1 -->
+                <article class="course-card">
+                    <figure>
+                        <img src="images/bok-choi.jpg" alt="Μποκ Τσόι (Bok Choi) - Παραδοσιακά Λαχανικά">
+                        <figcaption>Μποκ Τσόι (Bok Choi) στον Ατμό</figcaption>
+                    </figure>
+                    <div class="course-info">
+                        <div class="course-badges-row">
+                            <span class="badge-pill duration">⏱ 5 Εβδομάδες</span>
+                            <span class="badge-pill level">🌿 Χορτοφαγικό</span>
+                        </div>
+                        <hgroup>
+                            <h2>Ιαπωνική Χορτοφαγική Κουζίνα</h2>
+                            <h3>Ολοκληρωμένος Κύκλος Εργαστηρίων</h3>
+                        </hgroup>
+                        <p>
+                            Μια πρακτική εισαγωγή στα παραδοσιακά ιαπωνικά χορτοφαγικά γεύματα. Μάθετε τις τεχνικές μαγειρέματος στον ατμό, την ισορροπία των μπαχαρικών και την τέλεια προετοιμασία ρυζιού και noodles.
+                        </p>
+                        <div class="course-card-footer">
+                            <div class="course-price">
+                                140€ <small>/ άτομο</small>
+                            </div>
+                            <a href="#" class="course-btn" onclick="alert('Εκπαιδευτική επίδειξη G.T DEV: Επιλέξατε το σεμινάριο Ιαπωνικής Χορτοφαγικής!'); return false;">
+                                Εγγραφή στο Τμήμα →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Course Article 2 -->
+                <article class="course-card">
+                    <figure>
+                        <img src="images/teriyaki.jpg" alt="Σάλτσα Teriyaki &amp; Γλασάρισμα">
+                        <figcaption>Χειροποίητη Σάλτσα Teriyaki</figcaption>
+                    </figure>
+                    <div class="course-info">
+                        <div class="course-badges-row">
+                            <span class="badge-pill duration">⏱ 1 Ημέρα (Masterclass)</span>
+                            <span class="badge-pill level" style="background: rgba(192, 132, 252, 0.12); color: var(--accent-purple); border-color: rgba(192, 132, 252, 0.25);">⭐ Εντατικό</span>
+                        </div>
+                        <hgroup>
+                            <h2>Masterclass Σαλτσών &amp; Teriyaki</h2>
+                            <h3>Μονοήμερο Εντατικό Σεμινάριο</h3>
+                        </hgroup>
+                        <p>
+                            Ένα εξειδικευμένο μονοήμερο σεμινάριο αφιερωμένο στην τέχνη των αυθεντικών ιαπωνικών σαλτσών: mirin, shoyu, dashi, teriyaki και πικάντικες διαβαθμίσεις για κάθε είδους συνταγή.
+                        </p>
+                        <div class="course-card-footer">
+                            <div class="course-price">
+                                65€ <small>/ άτομο</small>
+                            </div>
+                            <a href="#" class="course-btn" onclick="alert('Εκπαιδευτική επίδειξη G.T DEV: Επιλέξατε το Masterclass Σαλτσών!'); return false;">
+                                Εγγραφή στο Τμήμα →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Right Aside Column -->
+            <aside class="site-sidebar">
+                <!-- Widget: Popular Recipes -->
+                <div class="sidebar-widget" id="recipes">
+                    <h3 class="widget-heading">
+                        <span>🍱</span> Δημοφιλείς Συνταγές
+                    </h3>
+                    <ul class="popular-list">
+                        <li><a href="#" onclick="return false;"><span>Yakitori (Ψητό Κοτόπουλο)</span> <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="return false;"><span>Tsukune (Μπιφτεκάκια Κοτόπουλου)</span> <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="return false;"><span>Okonomiyaki (Αλμυρές Τηγανίτες)</span> <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="return false;"><span>Mizutaki (Ιαπωνικό Στιφάδο)</span> <span class="arrow">→</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Widget: Contact & Location (Semantic Address) -->
+                <div class="sidebar-widget" id="contact">
+                    <h3 class="widget-heading">
+                        <span>📍</span> Στοιχεία Επικοινωνίας
+                    </h3>
+                    <address class="address-box">
+                        <div class="address-item">
+                            <span class="icon">🏢</span>
+                            <div>
+                                <strong>G.T DEV Culinary Lab</strong><br>
+                                Λεωφόρος Βασιλίσσης Σοφίας 48<br>
+                                Αθήνα, Τ.Κ. 115 28
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong>Email:</strong> contact@gtdev.gr
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Τηλέφωνο:</strong> +30 210 1234567
+                            </div>
+                        </div>
+                    </address>
+                </div>
+
+                <!-- Widget: Semantic HTML5 Architecture Info -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-heading">
+                        <span>💡</span> Δομή HTML5 στο Παράδειγμα
+                    </h3>
+                    <div class="semantic-info-box">
+                        Η σελίδα χρησιμοποιεί <strong>&lt;header&gt;</strong> για την κεφαλίδα, <strong>&lt;nav&gt;</strong> για το μενού, <strong>&lt;main&gt;</strong> για τη διάταξη πλέγματος, <strong>&lt;section&gt;</strong> και <strong>&lt;article&gt;</strong> για τα μαθήματα, <strong>&lt;figure&gt;</strong> για τις εικόνες, <strong>&lt;aside&gt;</strong> για την πλευρική στήλη και <strong>&lt;footer&gt;</strong> για το υποσέλιδο.
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Semantic HTML5 Footer -->
+        <footer class="site-footer">
+            <div class="footer-left">
+                &copy; 2026 <strong>G.T DEV</strong> • Όλα τα δικαιώματα διασκευής ανήκουν στον G.T DEV.
+            </div>
+            <ul class="footer-nav">
+                <li><a href="../index.html">Πίνακας Περιεχομένων</a></li>
+                <li><a href="#courses">Μαθήματα</a></li>
+                <li><a href="#recipes">Συνταγές</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Educational Explainer Card & Source Code Box -->
+    <div class="code-explainer-card" id="codebox">
+        <div class="code-explainer-header">
+            <span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση • Κεφάλαιο 17</span>
+            <h3 class="code-explainer-title">💡 Σημασιολογική Διάταξη HTML5 (Semantic Layout)</h3>
+            <p class="code-explainer-desc">
+                Στην HTML5, αντικαθιστούμε τα παλιά γενικά <code>&lt;div&gt;</code> με ειδικές σημασιολογικές ετικέτες που περιγράφουν το ρόλο του περιεχομένου: <code>&lt;header&gt;</code> (κεφαλίδα), <code>&lt;nav&gt;</code> (πλοήγηση), <code>&lt;main&gt;</code> (κύριο περιεχόμενο), <code>&lt;section&gt;</code> (θεματική ενότητα), <code>&lt;article&gt;</code> (αυτοτελές άρθρο), <code>&lt;figure&gt;</code> (εικόνα με λεζάντα <code>&lt;figcaption&gt;</code>), <code>&lt;aside&gt;</code> (πλευρική στήλη) και <code>&lt;footer&gt;</code> (υποσέλιδο). Σε συνδυασμό με σύγχρονο <strong>CSS Grid</strong> (αντί για παλιά floats), δημιουργούμε ευέλικτες, responsive ιστοσελίδες υψηλής αισθητικής και προσβασιμότητας.
+            </p>
+        </div>
+        <div class="code-box-wrapper">
+            <div class="code-box-topbar">
+                <span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος (HTML5 &amp; CSS3)</span>
+                <button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+            </div>
+            <pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Διάταξη HTML5 - G.T DEV Academy&lt;/title&gt;
+    &lt;style&gt;
+        :root {
+            --bg-page: #070b14;
+            --bg-card: #131d33;
+            --primary: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-page);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+        }
+        .layout-container { max-width: 1100px; margin: 0 auto; }
+        header {
+            background: #0f172a;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+        }
+        nav ul { list-style: none; display: flex; gap: 14px; padding: 0; margin-top: 16px; }
+        nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        main { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { main { grid-template-columns: 1fr; } }
+        article, aside {
+            background: var(--bg-card);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        figure { margin: 0; }
+        figure img { width: 100%; border-radius: 12px; }
+        figcaption { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+        footer { margin-top: 30px; padding: 20px; text-align: center; color: var(--text-secondary); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;layout-container&quot;&gt;
+        &lt;header&gt;
+            &lt;h1&gt;G.T DEV HTML Academy&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#courses&quot;&gt;Μαθήματα&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#recipes&quot;&gt;Συνταγές&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Επικοινωνία&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;section id=&quot;courses&quot;&gt;
+                &lt;article&gt;
+                    &lt;figure&gt;
+                        &lt;img src=&quot;images/bok-choi.jpg&quot; alt=&quot;Μποκ Τσόι&quot;&gt;
+                        &lt;figcaption&gt;Μποκ Τσόι στον Ατμό&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                    &lt;hgroup&gt;
+                        &lt;h2&gt;Ιαπωνική Χορτοφαγική Κουζίνα&lt;/h2&gt;
+                        &lt;h3&gt;Σειρά μαθημάτων 5 εβδομάδων&lt;/h3&gt;
+                    &lt;/hgroup&gt;
+                    &lt;p&gt;Εισαγωγή στα παραδοσιακά ιαπωνικά γεύματα και τεχνικές μαγειρικής.&lt;/p&gt;
+                &lt;/article&gt;
+            &lt;/section&gt;
+            &lt;aside id=&quot;recipes&quot;&gt;
+                &lt;h3&gt;Δημοφιλείς Συνταγές&lt;/h3&gt;
+                &lt;p&gt;Yakitori, Tsukune, Okonomiyaki, Mizutaki.&lt;/p&gt;
+            &lt;/aside&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &amp;copy; 2026 G.T DEV • Εκπαιδευτική Πλατφόρμα HTML &amp; CSS
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <div class="code-explainer-footer">
+            <a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+            <span class="code-gtdev-credit">Δημιουργήθηκε από τον <strong>G.T DEV</strong> για φοιτητές &amp; μαθητές</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Engine -->
+    <script src="../code-helper.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Συγχώνευση Στηλών (Spanning Columns - Colspan)</title>
+		<style type="text/css">
+			table {
+				border: none;}
+			th, td {
+				border: none;
+				background-color: #dddddd;
+				padding: 5px;
+				width: 100px;}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th></th>
+				<th>9:00 πμ</th>
+				<th>10:00 πμ</th>
+				<th>11:00 πμ</th>
+				<th>12:00 μμ</th>
+			</tr>
+			<tr>
+				<th>Δευτέρα</th>
+				<td colspan="2">Γεωγραφία</td>
+				<td>Μαθηματικά</td>
+				<td>Καλλιτεχνικά</td>
+			</tr>
+			<tr>
+				<th>Τρίτη</th>
+				<td colspan="3">Γυμναστική</td>
+				<td>Οικιακή Οικονομία</td>
+			</tr>
+		</table>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Συγχώνευση Στηλών (colspan)</h3>
+				<p class="code-explainer-desc">Χρησιμοποιήστε το γνώρισμα <code>colspan="2"</code> σε ένα κελί <code>&lt;td&gt;</code> ή <code>&lt;th&gt;</code> ώστε να εκταθεί σε περισσότερες από μία στήλες.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Συγχώνευση Στηλών (Spanning Columns - Colspan)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			table {
+				border: none;}
+			th, td {
+				border: none;
+				background-color: #dddddd;
+				padding: 5px;
+				width: 100px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;table&gt;
+			&lt;tr&gt;
+				&lt;th&gt;&lt;/th&gt;
+				&lt;th&gt;9:00 πμ&lt;/th&gt;
+				&lt;th&gt;10:00 πμ&lt;/th&gt;
+				&lt;th&gt;11:00 πμ&lt;/th&gt;
+				&lt;th&gt;12:00 μμ&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Δευτέρα&lt;/th&gt;
+				&lt;td colspan=&quot;2&quot;&gt;Γεωγραφία&lt;/td&gt;
+				&lt;td&gt;Μαθηματικά&lt;/td&gt;
+				&lt;td&gt;Καλλιτεχνικά&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Τρίτη&lt;/th&gt;
+				&lt;td colspan=&quot;3&quot;&gt;Γυμναστική&lt;/td&gt;
+				&lt;td&gt;Οικιακή Οικονομία&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

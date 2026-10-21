@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Καταστάσεις :hover, :active, :focus</title>
+		<style type="text/css">
+			input {
+				padding: 6px 12px 6px 12px;
+				border: 1px solid #665544;
+				color: #ffffff;}
+			input.submit:hover {
+				background-color: #665544;}
+			input.submit:active {
+				background-color: chocolate;}
+			input.text {
+				color: #cccccc;}
+			input.text:focus {
+				color:#665544;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="text" class="text" value="Εισαγάγετε διεύθυνση email..." placeholder="Εισαγάγετε email..." />
+			<input type="submit" class="submit" />
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ψευδοκλάσεις Αλληλεπίδρασης (:hover, :active, :focus)</h3>
+				<p class="code-explainer-desc">Αλλάξτε την εμφάνιση στοιχείων κατά την αιώρηση του ποντικιού (<code>:hover</code>), το πάτημα του κουμπιού (<code>:active</code>) ή την εστίαση σε πεδίο (<code>:focus</code>).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Καταστάσεις :hover, :active, :focus&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			input {
+				padding: 6px 12px 6px 12px;
+				border: 1px solid #665544;
+				color: #ffffff;}
+			input.submit:hover {
+				background-color: #665544;}
+			input.submit:active {
+				background-color: chocolate;}
+			input.text {
+				color: #cccccc;}
+			input.text:focus {
+				color:#665544;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form&gt;
+			&lt;input type=&quot;text&quot; class=&quot;text&quot; value=&quot;Εισαγάγετε διεύθυνση email...&quot; placeholder=&quot;Εισαγάγετε email...&quot; /&gt;
+			&lt;input type=&quot;submit&quot; class=&quot;submit&quot; /&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

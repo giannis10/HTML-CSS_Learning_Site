@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Έλεγχος Εγκυρότητας Φόρμας HTML5 (Validation)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/login/" method="post">
+			<label for="username">Όνομα χρήστη (Username):</label>
+			<input type="text" name="username" id="username" required="required" /><br />
+			<label for="password">Κωδικός πρόσβασης (Password):</label>
+			<input type="password" name="password" id="password" required="required" />
+			<input type="submit" value="Υποβολή" />
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Έλεγχος Εγκυρότητας Φόρμας HTML5 (required)</h3>
+				<p class="code-explainer-desc">Προσθέτοντας το γνώρισμα <code>required="required"</code> σε ένα πεδίο, ο browser εμποδίζει την υποβολή της φόρμας εάν το πεδίο είναι κενό, εμφανίζοντας αυτόματο μήνυμα.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Έλεγχος Εγκυρότητας Φόρμας HTML5 (Validation)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/login/&quot; method=&quot;post&quot;&gt;
+			&lt;label for=&quot;username&quot;&gt;Όνομα χρήστη (Username):&lt;/label&gt;
+			&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot; required=&quot;required&quot; /&gt;&lt;br /&gt;
+			&lt;label for=&quot;password&quot;&gt;Κωδικός πρόσβασης (Password):&lt;/label&gt;
+			&lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot; required=&quot;required&quot; /&gt;
+			&lt;input type=&quot;submit&quot; value=&quot;Υποβολή&quot; /&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

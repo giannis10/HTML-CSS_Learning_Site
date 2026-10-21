@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Προσθήκη Βίντεο HTML5</title>
+	</head>
+	<body>
+		<video src="video/puppy.mp4" 
+			poster="images/puppy.jpg" 
+			width="400" height="300" 
+			preload
+			controls
+			loop>
+			<p>Ένα βίντεο με ένα κουτάβι που παίζει στο χιόνι</p>
+		</video>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ενσωμάτωση Βίντεο HTML5 (<video>)</h3>
+				<p class="code-explainer-desc">Στην HTML5 εισάγετε βίντεο απευθείας με <code>&lt;video src="video.mp4" width="400" height="300" controls preload loop&gt;</code> χωρίς ανάγκη πρόσθετων plugins.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Προσθήκη Βίντεο HTML5&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;video src=&quot;video/puppy.mp4&quot; 
+			poster=&quot;images/puppy.jpg&quot; 
+			width=&quot;400&quot; height=&quot;300&quot; 
+			preload
+			controls
+			loop&gt;
+			&lt;p&gt;Ένα βίντεο με ένα κουτάβι που παίζει στο χιόνι&lt;/p&gt;
+		&lt;/video&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

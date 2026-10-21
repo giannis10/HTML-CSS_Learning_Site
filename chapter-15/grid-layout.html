@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Διάταξη Πλέγματος (Grid Layout 960.gs)</title>
+		<link rel="stylesheet" type="text/css" href="css/960_12_col.css" />
+		<style>
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			#nav, #feature, .article, #footer {
+				background-color: #efefef;
+				margin-top: 20px;
+				padding: 10px 0px 5px 0px;}
+			#feature, .article {
+				height: 100px;}
+			li {
+				display: inline;
+				padding: 5px;}
+		</style>
+	</head>
+	<body>
+		<div class="container_12 clearfix">
+			<div id="header" class="grid_12">
+				<h1>Logo</h1>
+				<div id="nav">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Products</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="feature" class="grid_12">
+				<p>Feature</p>
+			</div>
+			<div class="article grid_4">
+				<p>Στήλη Πρώτη</p>
+			</div>
+			<div class="article grid_4">
+				<p>Στήλη Δεύτερη</p>
+			</div>
+			<div class="article grid_4">
+				<p>Στήλη Τρίτη</p>
+			</div>
+			<div id="footer" class="grid_12">
+				<p>&copy; Copyright 2011</p>
+			</div>
+		</div><!-- .container_12 -->
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Διάταξη Πλέγματος με το 960 Grid System</h3>
+				<p class="code-explainer-desc">Χρήση ενός τυποποιημένου συστήματος πλέγματος 12 ή 16 στηλών για ισορροπημένη και αρμονική τοποθέτηση των στοιχείων της σελίδας.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Διάταξη Πλέγματος (Grid Layout 960.gs)&lt;/title&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/960_12_col.css&quot; /&gt;
+		&lt;style&gt;
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			#nav, #feature, .article, #footer {
+				background-color: #efefef;
+				margin-top: 20px;
+				padding: 10px 0px 5px 0px;}
+			#feature, .article {
+				height: 100px;}
+			li {
+				display: inline;
+				padding: 5px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class=&quot;container_12 clearfix&quot;&gt;
+			&lt;div id=&quot;header&quot; class=&quot;grid_12&quot;&gt;
+				&lt;h1&gt;Logo&lt;/h1&gt;
+				&lt;div id=&quot;nav&quot;&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;feature&quot; class=&quot;grid_12&quot;&gt;
+				&lt;p&gt;Feature&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article grid_4&quot;&gt;
+				&lt;p&gt;Στήλη Πρώτη&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article grid_4&quot;&gt;
+				&lt;p&gt;Στήλη Δεύτερη&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article grid_4&quot;&gt;
+				&lt;p&gt;Στήλη Τρίτη&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;footer&quot; class=&quot;grid_12&quot;&gt;
+				&lt;p&gt;&amp;copy; Copyright 2011&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- .container_12 --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

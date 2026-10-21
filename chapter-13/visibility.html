@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Ορατότητα (Visibility)</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+			li {
+				display: inline; 
+				margin-right: 10px;}
+			li.coming-soon {
+				visibility: hidden;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>Αρχική</li>
+			<li>Προϊόντα</li>
+			<li class="coming-soon">Υπηρεσίες</li>
+			<li>Σχετικά</li>
+			<li>Επικοινωνία</li>
+		</ul>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ορατότητα Στοιχείου (visibility)</h3>
+				<p class="code-explainer-desc">Η ιδιότητα <code>visibility: hidden;</code> αποκρύπτει οπτικά ένα στοιχείο, αλλά διατηρεί άδειο τον χώρο που καταλαμβάνει στη σελίδα (σε αντίθεση με το <code>display: none</code>).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Ορατότητα (Visibility)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+			li {
+				display: inline; 
+				margin-right: 10px;}
+			li.coming-soon {
+				visibility: hidden;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Αρχική&lt;/li&gt;
+			&lt;li&gt;Προϊόντα&lt;/li&gt;
+			&lt;li class=&quot;coming-soon&quot;&gt;Υπηρεσίες&lt;/li&gt;
+			&lt;li&gt;Σχετικά&lt;/li&gt;
+			&lt;li&gt;Επικοινωνία&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Στυλ Fieldset και Legend</title>
+		<style type="text/css">
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			input {
+				border-bottom: 1px dotted #dcdcdc;
+				border-top: none;
+				border-right: none;
+				border-left: none;
+				padding: 5px;
+				width: 280px;
+				margin-bottom: 20px;}
+			input:focus {
+				border: 1px dotted #dcdcdc;
+				outline: none;}
+			input#submit {
+				color: #ffffff;
+				background-color: #665544;
+				border: none;
+				border-radius: 5px;
+				width: 80px;}
+			input#submit:hover {
+				color: #665544;
+				background-color: #efefef;}
+			fieldset {
+				width: 350px;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 20px;
+				text-align: right;}
+			legend {
+				background-color: #efefef;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 10px 20px;
+				text-align: left;
+				text-transform: uppercase;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Ενημερωτικό Δελτίο (Newsletter)</legend>
+				<label for="name">Name: </label><input type="text" id="name" />
+				<label for="email">Email: </label><input type="text" id="email" />
+				<input type="submit" value="Εγγραφή" id="submit" />
+			</fieldset>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Μορφοποίηση Fieldset και Legend</h3>
+				<p class="code-explainer-desc">Διαμορφώστε το πλαίσιο της ομάδας πεδίων και το στυλ του τίτλου (legend) με προσαρμοσμένα χρώματα, γραμματοσειρές και περιθώρια.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Στυλ Fieldset και Legend&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+			input {
+				border-bottom: 1px dotted #dcdcdc;
+				border-top: none;
+				border-right: none;
+				border-left: none;
+				padding: 5px;
+				width: 280px;
+				margin-bottom: 20px;}
+			input:focus {
+				border: 1px dotted #dcdcdc;
+				outline: none;}
+			input#submit {
+				color: #ffffff;
+				background-color: #665544;
+				border: none;
+				border-radius: 5px;
+				width: 80px;}
+			input#submit:hover {
+				color: #665544;
+				background-color: #efefef;}
+			fieldset {
+				width: 350px;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 20px;
+				text-align: right;}
+			legend {
+				background-color: #efefef;
+				border: 1px solid #dcdcdc;
+				border-radius: 10px;
+				padding: 10px 20px;
+				text-align: left;
+				text-transform: uppercase;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;Ενημερωτικό Δελτίο (Newsletter)&lt;/legend&gt;
+				&lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;name&quot; /&gt;
+				&lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;email&quot; /&gt;
+				&lt;input type=&quot;submit&quot; value=&quot;Εγγραφή&quot; id=&quot;submit&quot; /&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

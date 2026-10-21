@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Εφέ Rollover και CSS Sprites</title>
+		<style type="text/css">
+			a.button {
+				height: 36px;
+				background-image: url("images/button-sprite.jpg");
+				text-indent: -9999px;
+				display: inline-block;}
+			a#add-to-basket {
+				width: 174px;
+				background-position: 0px 0px;}
+			a#framing-options {
+				width: 210px;
+				background-position: -175px 0px;}
+			a#add-to-basket:hover {
+				background-position: 0px -40px;}
+			a#framing-options:hover {
+				background-position: -175px -40px;}
+			a#add-to-basket:active {
+				background-position: 0px -80px;}
+			a#framing-options:active {
+				background-position: -175px -80px;}
+		</style>
+	</head>
+	<body>
+		<a class="button" id="add-to-basket">Προσθήκη στο καλάθι</a>
+		<a class="button" id="framing-options">Επιλογές κορνίζας</a>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Τεχνική CSS Sprites για Κουμπιά Rollover</h3>
+				<p class="code-explainer-desc">Συνδυάστε όλες τις καταστάσεις ενός κουμπιού (κανονικό, hover, active) σε μία ενιαία εικόνα και μετατοπίστε απλώς τη θέση του φόντου (<code>background-position</code>) για ακαριαία απόκριση χωρίς καθυστέρηση φόρτωσης.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Εφέ Rollover και CSS Sprites&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			a.button {
+				height: 36px;
+				background-image: url(&quot;images/button-sprite.jpg&quot;);
+				text-indent: -9999px;
+				display: inline-block;}
+			a#add-to-basket {
+				width: 174px;
+				background-position: 0px 0px;}
+			a#framing-options {
+				width: 210px;
+				background-position: -175px 0px;}
+			a#add-to-basket:hover {
+				background-position: 0px -40px;}
+			a#framing-options:hover {
+				background-position: -175px -40px;}
+			a#add-to-basket:active {
+				background-position: 0px -80px;}
+			a#framing-options:active {
+				background-position: -175px -80px;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;a class=&quot;button&quot; id=&quot;add-to-basket&quot;&gt;Προσθήκη στο καλάθι&lt;/a&gt;
+		&lt;a class=&quot;button&quot; id=&quot;framing-options&quot;&gt;Επιλογές κορνίζας&lt;/a&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

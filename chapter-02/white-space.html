@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Κενά Διαστήματα (White Space)</title>
+	</head>
+	<body>
+		<p>Η Σελήνη απομακρύνεται από τη Γη.</p>
+		<p>Η Σελήνη	       απομακρύνεται από τη Γη.</p>
+		<p>Η Σελήνη απομακρύνεται από τη 
+
+			Γη.</p>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Διαχείριση Κενών Διαστημάτων (White Space)</h3>
+				<p class="code-explainer-desc">Ο browser συμπτύσσει πολλαπλά συνεχόμενα κενά, στηλοθέτες (tabs) και αλλαγές γραμμών σε ένα μόνο απλό κενό διάστημα (white space collapsing).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Κενά Διαστήματα (White Space)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Η Σελήνη απομακρύνεται από τη Γη.&lt;/p&gt;
+		&lt;p&gt;Η Σελήνη	       απομακρύνεται από τη Γη.&lt;/p&gt;
+		&lt;p&gt;Η Σελήνη απομακρύνεται από τη 
+
+			Γη.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

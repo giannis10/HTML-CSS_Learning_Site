@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Επικεφαλίδες Πίνακα (Table Headings)</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th></th>
+				<th scope="col">Σάββατο</th>
+				<th scope="col">Κυριακή</th>
+			</tr>
+			<tr>
+				<th scope="row">Εισιτήρια που πουλήθηκαν:</th>
+				<td>120</td>
+				<td>135</td>
+			</tr>
+			<tr>
+				<th scope="row">Συνολικές πωλήσεις:</th>
+				<td>600 €</td>
+				<td>675 €</td>
+			</tr>
+		</table>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Επικεφαλίδες Πίνακα (<th> και scope)</h3>
+				<p class="code-explainer-desc">Χρησιμοποιήστε <code>&lt;th scope="col"&gt;</code> για επικεφαλίδες στηλών και <code>&lt;th scope="row"&gt;</code> για επικεφαλίδες γραμμών.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Επικεφαλίδες Πίνακα (Table Headings)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;table&gt;
+			&lt;tr&gt;
+				&lt;th&gt;&lt;/th&gt;
+				&lt;th scope=&quot;col&quot;&gt;Σάββατο&lt;/th&gt;
+				&lt;th scope=&quot;col&quot;&gt;Κυριακή&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th scope=&quot;row&quot;&gt;Εισιτήρια που πουλήθηκαν:&lt;/th&gt;
+				&lt;td&gt;120&lt;/td&gt;
+				&lt;td&gt;135&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th scope=&quot;row&quot;&gt;Συνολικές πωλήσεις:&lt;/th&gt;
+				&lt;td&gt;600 €&lt;/td&gt;
+				&lt;td&gt;675 €&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

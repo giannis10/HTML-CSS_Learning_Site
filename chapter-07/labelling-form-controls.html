@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Ετικέτες Στοιχείων Φόρμας (Label)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/subscribe.php">
+			<label>Ηλικία: <input type="text" name="age" /></label>
+			<br />
+			Φύλο:
+			<input id="female" type="radio" name="gender" value="f">
+			<label for="female">Γυναίκα</label>
+			<input id="male" type="radio" name="gender" value="m">
+			<label for="male">Άνδρας</label>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ετικέτες Πεδίων Φόρμας (<label>)</h3>
+				<p class="code-explainer-desc">Συνδέστε επεξηγηματικό κείμενο με ένα πεδίο χρησιμοποιώντας <code>&lt;label for="id_πεδίου"&gt;</code> ή περικλείοντας το πεδίο μέσα στο <code>&lt;label&gt;</code> για ευκολότερο κλικ.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Ετικέτες Στοιχείων Φόρμας (Label)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/subscribe.php&quot;&gt;
+			&lt;label&gt;Ηλικία: &lt;input type=&quot;text&quot; name=&quot;age&quot; /&gt;&lt;/label&gt;
+			&lt;br /&gt;
+			Φύλο:
+			&lt;input id=&quot;female&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;f&quot;&gt;
+			&lt;label for=&quot;female&quot;&gt;Γυναίκα&lt;/label&gt;
+			&lt;input id=&quot;male&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;m&quot;&gt;
+			&lt;label for=&quot;male&quot;&gt;Άνδρας&lt;/label&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

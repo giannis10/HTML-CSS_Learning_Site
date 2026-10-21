@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Πλαίσιο Πολλαπλής Επιλογής (Multiple Select)</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/profile.php">
+			<p>Παίζετε κάποιο από τα παρακάτω μουσικά όργανα; (Μπορείτε να επιλέξετε περισσότερες από μία επιλογές κρατώντας πατημένο το πλήκτρο Ctrl σε PC ή Command σε Mac καθώς επιλέγετε.)</p>
+			<select name="instruments" size="3" multiple="multiple">
+				<option value="guitar" selected="selected">Κιθάρα</option>
+				<option value="drums">Ντραμς</option>
+				<option value="keyboard" selected="selected">Πλήκτρα</option>
+				<option value="bass">Μπάσο</option>
+			</select>
+		</form>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Λίστα Πολλαπλής Επιλογής (<select multiple>)</h3>
+				<p class="code-explainer-desc">Προσθέτοντας το γνώρισμα <code>multiple="multiple"</code> και <code>size="3"</code>, ο χρήστης μπορεί να επιλέξει πολλαπλά στοιχεία κρατώντας πατημένο το πλήκτρο Ctrl (ή Command σε Mac).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Πλαίσιο Πολλαπλής Επιλογής (Multiple Select)&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;http://www.example.com/profile.php&quot;&gt;
+			&lt;p&gt;Παίζετε κάποιο από τα παρακάτω μουσικά όργανα; (Μπορείτε να επιλέξετε περισσότερες από μία επιλογές κρατώντας πατημένο το πλήκτρο Ctrl σε PC ή Command σε Mac καθώς επιλέγετε.)&lt;/p&gt;
+			&lt;select name=&quot;instruments&quot; size=&quot;3&quot; multiple=&quot;multiple&quot;&gt;
+				&lt;option value=&quot;guitar&quot; selected=&quot;selected&quot;&gt;Κιθάρα&lt;/option&gt;
+				&lt;option value=&quot;drums&quot;&gt;Ντραμς&lt;/option&gt;
+				&lt;option value=&quot;keyboard&quot; selected=&quot;selected&quot;&gt;Πλήκτρα&lt;/option&gt;
+				&lt;option value=&quot;bass&quot;&gt;Μπάσο&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

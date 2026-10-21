@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Εικόνα Περιγράμματος (Border Image)</title>
+		<style type="text/css">
+			p {
+				width: 197px;
+				height: 54px;
+				border: 11px solid #ffffff;}
+			p.one {
+				-moz-border-image: url("images/dots.gif") 11 11 11 11 stretch;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 stretch;
+				border-image: url("images/dots.gif") 11 11 11 11 stretch;}
+			p.two {
+				-moz-border-image: url("images/dots.gif") 11 11 11 11 round;
+				-webkit-border-image: url("images/dots.gif") 11 11 11 11 round;
+				border-image: url("images/dots.gif") 11 11 11 11 round;}
+		</style>
+	</head>
+	<body>
+		<p class="one"></p>
+		<p class="two"></p>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Εικόνα ως Περίγραμμα (border-image)</h3>
+				<p class="code-explainer-desc">Χρησιμοποιήστε μια εικόνα για να σχεδιάσετε το περίγραμμα ενός κουτιού με την ιδιότητα <code>border-image: url(...) stretch|round;</code>.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Εικόνα Περιγράμματος (Border Image)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			p {
+				width: 197px;
+				height: 54px;
+				border: 11px solid #ffffff;}
+			p.one {
+				-moz-border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 stretch;
+				-webkit-border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 stretch;
+				border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 stretch;}
+			p.two {
+				-moz-border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 round;
+				-webkit-border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 round;
+				border-image: url(&quot;images/dots.gif&quot;) 11 11 11 11 round;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p class=&quot;one&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;two&quot;&gt;&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

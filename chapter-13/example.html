@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Κουτιά (Boxes)</title>
+		<style type="text/css">
+			body {
+				font-size: 80%;
+				font-family: "Courier New", Courier, monospace;
+				letter-spacing: 0.15em;	
+				background-color: #efefef;}
+			#page {
+				max-width: 940px;
+				min-width: 720px;
+				margin: 10px auto 10px auto;
+				padding: 20px;
+				border: 4px double #000;
+				background-color: #ffffff;}
+			#logo {
+				width: 150px;
+				margin: 10px auto 25px auto;}
+			ul {
+				width: 570px;
+				padding: 15px;
+				margin: 0px auto 0px auto;
+				border-top: 2px solid #000;
+				border-bottom: 1px solid #000;
+				text-align: center;}
+			li {
+				display: inline;
+				margin: 0px 3px;}
+			p {
+				text-align: center;
+				width: 600px; 
+				margin: 20px auto 20px auto; 
+				font-weight: normal;}
+			a {
+				color: #000000;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 6px 18px 5px 18px;}
+			a:hover, a.on {
+				color: #cc3333;
+				background-color: #ffffff;}
+		</style>
+	</head>
+	<body>
+		<div id="page">
+			<div id="logo">
+				<img src="images/logo.gif" alt="Οι Ειδικοί στα Αναλογικά (The Analog Specialists)" />
+			</div>
+			<ul id="navigation">
+				<li><a href="#" class="on">Αρχική</a></li>
+				<li><a href="#">Προς Πώληση</a></li>
+				<li><a href="#">Επισκευές</a></li>
+				<li><a href="#">Σχετικά</a></li>
+				<li><a href="#">Επικοινωνία</a></li>
+			</ul>
+			<p>
+				<img src="images/keys.jpg" alt="Fender Rhodes, Hohner Clavinet, and Wurlitzer EP200" />
+			</p>
+			<p>
+				Ειδικευόμαστε στην πώληση και επισκευή κλασικών πληκτροφόρων οργάνων, ιδιαίτερα των Fender Rhodes, Wurlitzer EP200 και Hohner Clavinet.
+			</p>
+		</div>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ολοκληρωμένη Σελίδα με Box Model</h3>
+				<p class="code-explainer-desc">Σελίδα καταστήματος κλασικών μουσικών οργάνων με κεντραρισμένο πλαίσιο, διπλό περίγραμμα, εσωτερικά περιθώρια και οριζόντιο μενού πλοήγησης.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Κουτιά (Boxes)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			body {
+				font-size: 80%;
+				font-family: &quot;Courier New&quot;, Courier, monospace;
+				letter-spacing: 0.15em;	
+				background-color: #efefef;}
+			#page {
+				max-width: 940px;
+				min-width: 720px;
+				margin: 10px auto 10px auto;
+				padding: 20px;
+				border: 4px double #000;
+				background-color: #ffffff;}
+			#logo {
+				width: 150px;
+				margin: 10px auto 25px auto;}
+			ul {
+				width: 570px;
+				padding: 15px;
+				margin: 0px auto 0px auto;
+				border-top: 2px solid #000;
+				border-bottom: 1px solid #000;
+				text-align: center;}
+			li {
+				display: inline;
+				margin: 0px 3px;}
+			p {
+				text-align: center;
+				width: 600px; 
+				margin: 20px auto 20px auto; 
+				font-weight: normal;}
+			a {
+				color: #000000;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 6px 18px 5px 18px;}
+			a:hover, a.on {
+				color: #cc3333;
+				background-color: #ffffff;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;page&quot;&gt;
+			&lt;div id=&quot;logo&quot;&gt;
+				&lt;img src=&quot;images/logo.gif&quot; alt=&quot;Οι Ειδικοί στα Αναλογικά (The Analog Specialists)&quot; /&gt;
+			&lt;/div&gt;
+			&lt;ul id=&quot;navigation&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;on&quot;&gt;Αρχική&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Προς Πώληση&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Επισκευές&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Σχετικά&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Επικοινωνία&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;p&gt;
+				&lt;img src=&quot;images/keys.jpg&quot; alt=&quot;Fender Rhodes, Hohner Clavinet, and Wurlitzer EP200&quot; /&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				Ειδικευόμαστε στην πώληση και επισκευή κλασικών πληκτροφόρων οργάνων, ιδιαίτερα των Fender Rhodes, Wurlitzer EP200 και Hohner Clavinet.
+			&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

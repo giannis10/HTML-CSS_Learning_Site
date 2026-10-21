@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Προσθήκη Flash MP3 Player</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<script type="text/javascript">
+			var flashvars = {};
+			var params = {mp3: "audio/test-audio.mp3"};
+			swfobject.embedSWF("flash/player_mp3_1.0.0.swf", "music-player", "200", "20", "8.0.0", flashvars, params);
+		</script>
+	</head>
+	<body>
+		<div id="music-player">
+			<p>Δεν μπορείτε να ακούσετε αυτό το κομμάτι επειδή το πρόγραμμα περιήγησης δεν υποστηρίζει το Flash music player.</p>
+		</div>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Αναπαραγωγή Ήχου μέσω Flash MP3 Player</h3>
+				<p class="code-explainer-desc">Ιστορική μέθοδος αναπαραγωγής MP3 μέσω ελαφρού player Flash για browsers που δεν υποστήριζαν την ετικέτα audio.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Προσθήκη Flash MP3 Player&lt;/title&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js&quot;&gt;&lt;/script&gt;
+		&lt;script type=&quot;text/javascript&quot;&gt;
+			var flashvars = {};
+			var params = {mp3: &quot;audio/test-audio.mp3&quot;};
+			swfobject.embedSWF(&quot;flash/player_mp3_1.0.0.swf&quot;, &quot;music-player&quot;, &quot;200&quot;, &quot;20&quot;, &quot;8.0.0&quot;, flashvars, params);
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;music-player&quot;&gt;
+			&lt;p&gt;Δεν μπορείτε να ακούσετε αυτό το κομμάτι επειδή το πρόγραμμα περιήγησης δεν υποστηρίζει το Flash music player.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

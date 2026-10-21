@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Εκτενείς Πίνακες (Long Tables)</title>
+		<style type="text/css">
+			table {
+				border: none;}
+			thead th {
+				border-bottom: 2px solid #444444;
+				width: 120px;}
+			tfoot td {
+				border-top: 1px solid #444444;}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Ημερομηνία</th>
+					<th>Έσοδα</th>
+					<th>Έξοδα</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><th>1η Ιανουαρίου</th><td>250</td><td>36</td></tr>
+				<tr><th>2α Ιανουαρίου</th><td>285</td><td>48</td></tr>
+				<tr><th>3η Ιανουαρίου</th><td>260</td><td>42</td></tr>
+				<tr><th>4η Ιανουαρίου</th><td>290</td><td>38</td></tr>
+				<tr><th>5η Ιανουαρίου</th><td>310</td><td>115</td></tr>
+				<tr><th>6η Ιανουαρίου</th><td>168</td><td>14</td></tr>
+				<tr><th>7η Ιανουαρίου</th><td>226</td><td>20</td></tr>
+				<tr><th>8η Ιανουαρίου</th><td>253</td><td>37</td></tr>
+				<tr><th>9η Ιανουαρίου</th><td>294</td><td>33</td></tr>
+				<tr><th>10η Ιανουαρίου</th><td>216</td><td>46</td></tr>
+				<tr><th>11η Ιανουαρίου</th><td>244</td><td>29</td></tr>
+				<tr><th>12η Ιανουαρίου</th><td>297</td><td>32</td></tr>
+				<tr><th>13η Ιανουαρίου</th><td>328</td><td>86</td></tr>
+				<tr><th>14η Ιανουαρίου</th><td>215</td><td>38</td></tr>
+				<tr><th>15η Ιανουαρίου</th><td>254</td><td>30</td></tr>
+				<tr><th>16η Ιανουαρίου</th><td>256</td><td>27</td></tr>
+				<tr><th>17η Ιανουαρίου</th><td>311</td><td>68</td></tr>
+				<tr><th>18η Ιανουαρίου</th><td>212</td><td>39</td></tr>
+				<tr><th>19η Ιανουαρίου</th><td>234</td><td>36</td></tr>
+				<tr><th>20ή Ιανουαρίου</th><td>221</td><td>43</td></tr>
+				<tr><th>21η Ιανουαρίου</th><td>259</td><td>38</td></tr>
+				<tr><th>22α Ιανουαρίου</th><td>246</td><td>31</td></tr>
+				<tr><th>23η Ιανουαρίου</th><td>248</td><td>17</td></tr>
+				<tr><th>24η Ιανουαρίου</th><td>229</td><td>45</td></tr>
+				<tr><th>25η Ιανουαρίου</th><td>263</td><td>34</td></tr>
+				<tr><th>26η Ιανουαρίου</th><td>258</td><td>41</td></tr>
+				<tr><th>27η Ιανουαρίου</th><td>283</td><td>22</td></tr>
+				<tr><th>28η Ιανουαρίου</th><td>256</td><td>30</td></tr>
+				<tr><th>29η Ιανουαρίου</th><td>278</td><td>47</td></tr>
+				<tr><th>30ή Ιανουαρίου</th><td>251</td><td>15</td></tr>
+				<tr><th>31η Ιανουαρίου</th><td>129</td><td>64</td></tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td></td>
+					<td>7824</td>
+					<td>1241</td>
+				</tr>
+			</tfoot>
+		</table>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Δομή Εκτενών Πινάκων (<thead>, <tbody>, <tfoot>)</h3>
+				<p class="code-explainer-desc">Χωρίστε μεγάλους πίνακες σε επικεφαλίδα (<code>&lt;thead&gt;</code>), κύριο σώμα δεδομένων (<code>&lt;tbody&gt;</code>) και υποσέλιδο αθροισμάτων (<code>&lt;tfoot&gt;</code>).</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Εκτενείς Πίνακες (Long Tables)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			table {
+				border: none;}
+			thead th {
+				border-bottom: 2px solid #444444;
+				width: 120px;}
+			tfoot td {
+				border-top: 1px solid #444444;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;table&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Ημερομηνία&lt;/th&gt;
+					&lt;th&gt;Έσοδα&lt;/th&gt;
+					&lt;th&gt;Έξοδα&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;&lt;th&gt;1η Ιανουαρίου&lt;/th&gt;&lt;td&gt;250&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;2α Ιανουαρίου&lt;/th&gt;&lt;td&gt;285&lt;/td&gt;&lt;td&gt;48&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;3η Ιανουαρίου&lt;/th&gt;&lt;td&gt;260&lt;/td&gt;&lt;td&gt;42&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;4η Ιανουαρίου&lt;/th&gt;&lt;td&gt;290&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;5η Ιανουαρίου&lt;/th&gt;&lt;td&gt;310&lt;/td&gt;&lt;td&gt;115&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;6η Ιανουαρίου&lt;/th&gt;&lt;td&gt;168&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;7η Ιανουαρίου&lt;/th&gt;&lt;td&gt;226&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;8η Ιανουαρίου&lt;/th&gt;&lt;td&gt;253&lt;/td&gt;&lt;td&gt;37&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;9η Ιανουαρίου&lt;/th&gt;&lt;td&gt;294&lt;/td&gt;&lt;td&gt;33&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;10η Ιανουαρίου&lt;/th&gt;&lt;td&gt;216&lt;/td&gt;&lt;td&gt;46&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;11η Ιανουαρίου&lt;/th&gt;&lt;td&gt;244&lt;/td&gt;&lt;td&gt;29&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;12η Ιανουαρίου&lt;/th&gt;&lt;td&gt;297&lt;/td&gt;&lt;td&gt;32&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;13η Ιανουαρίου&lt;/th&gt;&lt;td&gt;328&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;14η Ιανουαρίου&lt;/th&gt;&lt;td&gt;215&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;15η Ιανουαρίου&lt;/th&gt;&lt;td&gt;254&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;16η Ιανουαρίου&lt;/th&gt;&lt;td&gt;256&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;17η Ιανουαρίου&lt;/th&gt;&lt;td&gt;311&lt;/td&gt;&lt;td&gt;68&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;18η Ιανουαρίου&lt;/th&gt;&lt;td&gt;212&lt;/td&gt;&lt;td&gt;39&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;19η Ιανουαρίου&lt;/th&gt;&lt;td&gt;234&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;20ή Ιανουαρίου&lt;/th&gt;&lt;td&gt;221&lt;/td&gt;&lt;td&gt;43&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;21η Ιανουαρίου&lt;/th&gt;&lt;td&gt;259&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;22α Ιανουαρίου&lt;/th&gt;&lt;td&gt;246&lt;/td&gt;&lt;td&gt;31&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;23η Ιανουαρίου&lt;/th&gt;&lt;td&gt;248&lt;/td&gt;&lt;td&gt;17&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;24η Ιανουαρίου&lt;/th&gt;&lt;td&gt;229&lt;/td&gt;&lt;td&gt;45&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;25η Ιανουαρίου&lt;/th&gt;&lt;td&gt;263&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;26η Ιανουαρίου&lt;/th&gt;&lt;td&gt;258&lt;/td&gt;&lt;td&gt;41&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;27η Ιανουαρίου&lt;/th&gt;&lt;td&gt;283&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;28η Ιανουαρίου&lt;/th&gt;&lt;td&gt;256&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;29η Ιανουαρίου&lt;/th&gt;&lt;td&gt;278&lt;/td&gt;&lt;td&gt;47&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;30ή Ιανουαρίου&lt;/th&gt;&lt;td&gt;251&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;th&gt;31η Ιανουαρίου&lt;/th&gt;&lt;td&gt;129&lt;/td&gt;&lt;td&gt;64&lt;/td&gt;&lt;/tr&gt;
+			&lt;/tbody&gt;
+			&lt;tfoot&gt;
+				&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;7824&lt;/td&gt;
+					&lt;td&gt;1241&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tfoot&gt;
+		&lt;/table&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Ελάχιστο & Μέγιστο Πλάτος (min/max-width)</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+			th {
+				border-bottom: 1px solid #0088dd; 
+				text-align: left; 
+				color: #0088dd;
+				font-weight: normal;}
+			td {
+				min-width: 150px;
+				min-height: 200px;
+				vertical-align: top;
+				line-height: 1.4em;}
+			td.description {
+				min-width: 450px;
+				max-width: 650px;
+				text-align: left;
+				padding: 5px;
+				margin: 0px;}
+			</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>Φωτογραφία</th>
+				<th>Περιγραφή</th>
+				<th>Τιμή</th>
+			</tr>
+			<tr>
+				<td><img src="images/rhodes.jpg" width="200" height="150" alt="Fender Rhodes" /></td>
+				<td class="description">Το πιάνο Rhodes είναι ένα ηλεκτρομηχανικό πιάνο, που εφευρέθηκε από τον Harold Rhodes κατά τη δεκαετία του 1950. Χρησιμοποιεί πληκτρολόγιο τύπου πιάνου με σφυράκια που χτυπούν μικρές μεταλλικές ράβδους, με τον ήχο να ενισχύεται από ηλεκτρομαγνητικούς μαγνήτες.</td>
+				<td>$1400</td>
+			</tr>
+			<tr>
+				<td><img src="images/wurlitzer.jpg" width="200" height="150" alt="Wurlitzer EP200" /></td>
+				<td class="description">Το ηλεκτρικό πιάνο Wurlitzer είναι ένα ηλεκτρομηχανικό πιάνο που δημιουργήθηκε από την εταιρεία Rudolph Wurlitzer Company. Χρησιμοποιεί πληκτρολόγιο τύπου πιάνου με σφυράκια που χτυπούν μικρές μεταλλικές ράβδους, ενισχυόμενο από ηλεκτρομαγνητικούς μαγνήτες.</td>
+				<td>$1600</td>
+			</tr>
+			<tr>
+				<td><img src="images/clavinet.jpg" width="200" height="150" alt="Hohner Clavinet D6" /></td>
+				<td class="description">Το Clavinet είναι ένα ηλεκτρονικά ενισχυμένο κλαβίχορδο που κατασκευάστηκε από την εταιρεία Hohner. Κάθε πλήκτρο χρησιμοποιεί ένα ελαστικό άκρο για να χτυπήσει μια χορδή. Ο χαρακτηριστικός λαμπερός staccato ήχος του συχνά συγκρίνεται με αυτόν μιας ηλεκτρικής κιθάρας. Διάφορα μοντέλα παρήχθησαν με τα χρόνια, συμπεριλαμβανομένων των I, II, L, C, D6 και E7.</td>
+				<td>$1200</td>
+			</tr>
+		</table>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ελάχιστο και Μέγιστο Πλάτος (min-width και max-width)</h3>
+				<p class="code-explainer-desc">Περιορίστε πόσο μπορεί να συρρικνωθεί ή να απλωθεί ένα στοιχείο χρησιμοποιώντας <code>min-width</code> και <code>max-width</code> για απόκριση σε διαφορετικές οθόνες.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Ελάχιστο &amp; Μέγιστο Πλάτος (min/max-width)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+			th {
+				border-bottom: 1px solid #0088dd; 
+				text-align: left; 
+				color: #0088dd;
+				font-weight: normal;}
+			td {
+				min-width: 150px;
+				min-height: 200px;
+				vertical-align: top;
+				line-height: 1.4em;}
+			td.description {
+				min-width: 450px;
+				max-width: 650px;
+				text-align: left;
+				padding: 5px;
+				margin: 0px;}
+			&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;table&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Φωτογραφία&lt;/th&gt;
+				&lt;th&gt;Περιγραφή&lt;/th&gt;
+				&lt;th&gt;Τιμή&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src=&quot;images/rhodes.jpg&quot; width=&quot;200&quot; height=&quot;150&quot; alt=&quot;Fender Rhodes&quot; /&gt;&lt;/td&gt;
+				&lt;td class=&quot;description&quot;&gt;Το πιάνο Rhodes είναι ένα ηλεκτρομηχανικό πιάνο, που εφευρέθηκε από τον Harold Rhodes κατά τη δεκαετία του 1950. Χρησιμοποιεί πληκτρολόγιο τύπου πιάνου με σφυράκια που χτυπούν μικρές μεταλλικές ράβδους, με τον ήχο να ενισχύεται από ηλεκτρομαγνητικούς μαγνήτες.&lt;/td&gt;
+				&lt;td&gt;$1400&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src=&quot;images/wurlitzer.jpg&quot; width=&quot;200&quot; height=&quot;150&quot; alt=&quot;Wurlitzer EP200&quot; /&gt;&lt;/td&gt;
+				&lt;td class=&quot;description&quot;&gt;Το ηλεκτρικό πιάνο Wurlitzer είναι ένα ηλεκτρομηχανικό πιάνο που δημιουργήθηκε από την εταιρεία Rudolph Wurlitzer Company. Χρησιμοποιεί πληκτρολόγιο τύπου πιάνου με σφυράκια που χτυπούν μικρές μεταλλικές ράβδους, ενισχυόμενο από ηλεκτρομαγνητικούς μαγνήτες.&lt;/td&gt;
+				&lt;td&gt;$1600&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src=&quot;images/clavinet.jpg&quot; width=&quot;200&quot; height=&quot;150&quot; alt=&quot;Hohner Clavinet D6&quot; /&gt;&lt;/td&gt;
+				&lt;td class=&quot;description&quot;&gt;Το Clavinet είναι ένα ηλεκτρονικά ενισχυμένο κλαβίχορδο που κατασκευάστηκε από την εταιρεία Hohner. Κάθε πλήκτρο χρησιμοποιεί ένα ελαστικό άκρο για να χτυπήσει μια χορδή. Ο χαρακτηριστικός λαμπερός staccato ήχος του συχνά συγκρίνεται με αυτόν μιας ηλεκτρικής κιθάρας. Διάφορα μοντέλα παρήχθησαν με τα χρόνια, συμπεριλαμβανομένων των I, II, L, C, D6 και E7.&lt;/td&gt;
+				&lt;td&gt;$1200&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

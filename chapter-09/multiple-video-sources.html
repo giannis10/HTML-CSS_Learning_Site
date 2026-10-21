@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Πολλαπλές Πηγές Βίντεο HTML5</title>
+	</head>
+	<body>
+		<video poster="images/puppy.jpg" width="400" height="320" preload controls loop>
+			<source src="video/puppy.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+			<source src="video/puppy.webm" type='video/webm;codecs="vp8, vorbis"' />
+			<p>Ένα βίντεο με ένα κουτάβι που παίζει στο χιόνι</p>
+		</video>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Πολλαπλές Πηγές Βίντεο (<source>)</h3>
+				<p class="code-explainer-desc">Χρησιμοποιήστε πολλαπλές ετικέτες <code>&lt;source src="..." type="..." /&gt;</code> μέσα στο <code>&lt;video&gt;</code> (π.χ. MP4 και WebM) για εξασφάλιση συμβατότητας με όλους τους browsers.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;el&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Πολλαπλές Πηγές Βίντεο HTML5&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;video poster=&quot;images/puppy.jpg&quot; width=&quot;400&quot; height=&quot;320&quot; preload controls loop&gt;
+			&lt;source src=&quot;video/puppy.mp4&quot; type=&#x27;video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&#x27; /&gt;
+			&lt;source src=&quot;video/puppy.webm&quot; type=&#x27;video/webm;codecs=&quot;vp8, vorbis&quot;&#x27; /&gt;
+			&lt;p&gt;Ένα βίντεο με ένα κουτάβι που παίζει στο χιόνι&lt;/p&gt;
+		&lt;/video&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>

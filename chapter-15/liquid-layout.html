@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../code-helper.css">
+		<meta charset="utf-8">
+		<title>Ρευστή Διάταξη (Liquid Layout)</title>
+		<style type="text/css">
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			body {
+				width: 90%;
+				margin: 0 auto;}
+			#content {
+				overflow: auto;}
+			#nav, #feature, #footer {
+				margin: 1%;}
+			.column1, .column2, .column3 {
+				width: 31.3%;
+				float: left;
+				margin: 1%;}
+			.column3 {
+				margin-right: 0%;}
+			li {
+				display: inline;
+				padding: 0.5em;}
+			#nav, #footer {
+				background-color: #efefef;
+				padding: 0.5em 0;}
+			#feature, .article {
+				height: 10em;
+				margin-bottom: 1em;
+				background-color: #efefef;}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Logo</h1>
+			<div id="nav">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Products</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="feature">
+				<p>Feature</p>
+			</div>
+			<div class="article column1">
+				<p>Στήλη Πρώτη</p>
+			</div>
+			<div class="article column2">
+				<p>Στήλη Δεύτερη</p>
+			</div>
+			<div class="article column3">
+				<p>Στήλη Τρίτη</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p>&copy; Copyright 2011</p>
+		</div>
+	
+		<div class="code-explainer-card">
+			<div class="code-explainer-header">
+				<span class="code-explainer-badge">Οδηγός &amp; Επεξήγηση</span>
+				<h3 class="code-explainer-title">💡 Ρευστή Διάταξη (Liquid / Fluid Layout)</h3>
+				<p class="code-explainer-desc">Διάταξη όπου τα πλάτη των στηλών ορίζονται με ποσοστά (π.χ. <code>width: 60%;</code> και <code>width: 30%;</code>), προσαρμοζόμενα αυτόματα στο πλάτος του παραθύρου.</p>
+			</div>
+			<div class="code-box-wrapper">
+				<div class="code-box-topbar">
+					<span class="code-box-label">💻 Πηγαίος Κώδικας Παραδείγματος</span>
+					<button class="code-copy-btn" onclick="copyCodeSnippet(this)">📋 Αντιγραφή Κώδικα</button>
+				</div>
+				<pre class="code-pre-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Ρευστή Διάταξη (Liquid Layout)&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			* {
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;
+				text-align: center;}
+			body {
+				width: 90%;
+				margin: 0 auto;}
+			#content {
+				overflow: auto;}
+			#nav, #feature, #footer {
+				margin: 1%;}
+			.column1, .column2, .column3 {
+				width: 31.3%;
+				float: left;
+				margin: 1%;}
+			.column3 {
+				margin-right: 0%;}
+			li {
+				display: inline;
+				padding: 0.5em;}
+			#nav, #footer {
+				background-color: #efefef;
+				padding: 0.5em 0;}
+			#feature, .article {
+				height: 10em;
+				margin-bottom: 1em;
+				background-color: #efefef;}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id=&quot;header&quot;&gt;
+			&lt;h1&gt;Logo&lt;/h1&gt;
+			&lt;div id=&quot;nav&quot;&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id=&quot;content&quot;&gt;
+			&lt;div id=&quot;feature&quot;&gt;
+				&lt;p&gt;Feature&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article column1&quot;&gt;
+				&lt;p&gt;Στήλη Πρώτη&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article column2&quot;&gt;
+				&lt;p&gt;Στήλη Δεύτερη&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;article column3&quot;&gt;
+				&lt;p&gt;Στήλη Τρίτη&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id=&quot;footer&quot;&gt;
+			&lt;p&gt;&amp;copy; Copyright 2011&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</div>
+			<div class="code-explainer-footer">
+				<a href="../index.html" class="code-back-link">⬅ Επιστροφή στον Πίνακα Περιεχομένων</a>
+			</div>
+		</div>
+		<script src="../code-helper.js"></script>
+
+	</body>
+</html>
